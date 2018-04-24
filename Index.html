@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <title>NowFloats | Making small Business, bigger</title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <link rel="stylesheet" href="main.css"  type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header">
+        <a href="https://nowfloats.com" class="header-logo">
+            <img src="https://cdn.nowfloats.com/nf/v1/Images/Home4/logo.png">
+        </a>
+         <div class="overlay-header">
+             <div class="input-track">
+                 <span>Enter your Order ID to track your delivery status</span>
+                 <div class="track-order">
+                     <input type="text" id="tracking-id" placeholder="#Order ID" required="">
+                     <button type="button" class="track-order-button">Track Order</button>
+                 </div>
+             </div>
+             <div class="moving-path">
+                 <div class="delivery-bike"> <img src="images/delivery_guy.png"></div>
+             </div>
+        </div>
+        <div class="header-container" style="display:none;">
+            <div class="status-container">
+                <div class="order-details">
+                    <div class="delivery-truck">
+                        <img src="images/shipped truck.png">
+                    </div>
+                    <div class="order-status">
+                        <span class="current-state"> </span>
+                        <span class="time-span"></span>
+                    </div>
+                </div>
+                <div class="order-details">
+                    <div class="order-header">Shipping Details</div>
+                    <div class="shipment-address"></div>
+                    <div class="contact-details"><span></span><span></span></div>
+                </div>
+                <div class="order-details">
+                    <div class="order-header">Order Summary</div>
+                    <div class="order-info">
+                        <table>
+                            <tr class="order-id">
+                                <td>Order Id</td>
+                                <td></td>
+                            </tr>
+                            <tr class="order-date">
+                                <td>Order date</td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr class="payment-type">
+                                <td>Payment</td>
+                                <td>Credit card
+                                </td>
+                            </tr>
+                            <tr class="paid-amount">
+                                <td>Amount Paid</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="contact-note"><span>Check your email for more details about order</span></div>
+                </div>
+                <div class="order-details">
+                    <div class="order-header">Order Manage</div>
+                    <div class="manage-info">For cancellation, return, refund or any other delivery support,
+                        please reach out to +91-XXXXXXXXXX or write to us at  assuredpurchase@nowfloats.com </br> </br>
+                        While writing please mention your order id in mail subject.</div>
+                </div>
+            </div>
+            <div class="order-states-container">
+                <div class="order-states">
+                    <div class="state-track">
+                        <div class="state"></div>
+                        <div class="state-info"><img src="images/Confirmed.png"></div>
+                        <div class="state-path"></div>
+                    </div>
+                    <div class="state-track">
+                        <div class="state"></div>
+                        <div class="state-info"><img src="images/box packed.png"></div>
+                        <div class="state-path"></div>
+                    </div>
+                    <div class="state-track">
+                        <div class="state"></div>
+                        <div class="state-info"><img src="images/shipped.png"></div>
+                        <div class="state-path"></div>
+                    </div>
+                    <div class="state-track">
+                        <div class="state"></div>
+                        <div class="state-info"><img src="images/map.png"></div>
+                        <div class="state-path"></div>
+                    </div>
+                    <div class="state-track">
+                        <div class="state"></div>
+                        <div class="state-info"><img src="images/house.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="assurance-container">
+        <div class="assurance-question">What does 'Assured Purchase' stands for?</div>
+        <div class="assured-badge"> <img src="images/Secured Purchase Icon.png"></div>
+        <div class="assurance-text"> 'Assured Purchase' is a buyer-centric guarantee from NowFloats focused on aspects of quality, reliability and Purchase protection.
+            Assured products have high quality standards and delivered hassle free. Buyers can be assured that their money is safe with NowFloats.
+            In case a product does not match buyer's expectations as described while purchasing, they can get in touch with our support team and raise a
+            request to refund your money. The amount paid for a product will be transferred to the seller only after the buyer is satisfied with the product. <br> <br>
+            Buyers shopping on any NowFloats-enabled seller website, will be able to clearly identify a NF-Assured website by a badge that looks like the following: </div>
+    </div>
+    <div class="section">
+        <div class="section-header"><div class="header-policy"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp Policies governing your 'Assured Purchase'
+            <span>(updated on:June 21,2016)</span></div>
+            <div class="search-field">
+                <input type="text" placeholder="Search.." class="search-input">
+                <button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="policy-steps">
+            <div class="order-status">
+                <div class="policy-button"> <span>Order Status</span><span><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+                <div class="policy-description">
+                    <ul>
+                        <li> <span> Placed order: </span>&nbsp; The buyer has successfully paid for the order. </li>
+                        <li><span>Confirmed order:</span> &nbsp; The seller has confirmed that order can be successfully fulfilled. </li>
+                        <li><span>Dispatched order:</span>&nbsp;  The seller has dispatched the order to Buyer’s chosen drop address.</li>
+                        <li><span>Delivered order:</span>&nbsp;  The buyer has successfully received the product.</li>
+                        <li><span>Order Tracking:</span> &nbsp Packing order for normal wear and tear is the responsibility of the merchant.
+                            Nowfloats will not be responsible for damaged products due to improper packing</li>
+                        <li><span> Banned Products:</span>&nbsp
+                            Oil-based paint and thinners (flammable liquids), Industrial solvents, Insecticides, garden chemicals (fertilizers, poisons),
+                            lithium batteries, Magnetized materials, Machinery (chain saws, outboard engines containing fuel or that have, contained fuel),
+                            Fuel for camp stoves, lanterns, torches or heating elements, Automobile batteries, Infectious substances, Any compound, liquid or gas that
+                            has toxic characteristics, Bleach, Flammable adhesives, Arms and ammunitions, Dry ice (Carbon Dioxide, Solid), Precious stones, gems and jewellery,
+                            Uncrossed (bearer) drafts / cheque, currency and coins, Poison, Firearms, explosives and military equipment,
+                            Hazardous and radioactive material, Foodstuff and liquor, Any pornographic material, Hazardous chemical item.
+                            This is a suggestive list and not an exhaustive one.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="return-policy">
+                <div class="policy-button"><span>Return Policy for Buyers</span><span><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+                <div class="policy-description">
+                    <ul>
+                        <li>Return request will be accepted only when order is delivered successfully. </li>
+                        <li>Returns will be accepted upto 10 days post successful delivery of any order ie t+10 days. </li>
+                        <li>Buyer can return an order by calling NowFloats customer care at 1860-123-1233 or writing to <a href="mailto:ria@nowfloats">ria@nowfloats.com</a>. </li>
+                        <li>Return will only be accepted by Seller in case of unused and undamaged product. </li>
+                        <li>Once order is returned to seller, refund will be processed within 7 working days. </li>
+                        <li>The Delivery partner shall seal the package provided by the buyer at the time of pickup in front of the customer.
+                            The sole responsibility of the contents of the packed consignment shall lie with the end buyer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="refund-policy">
+                <div class="policy-button"><span>Refund Policy for Buyers</span><span><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+                <div class="policy-description">
+                    <ul>
+                        <li>Refund will be processed within 7 working days. </li>
+                        <li>Refund will be processed in case of:
+                            <ul>
+                                <li>Cancelled order. </li>
+                                <li>Returned order. </li>
+                            </ul> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="settlement-policy">
+                <div class="policy-button"><span>Seller Payment Settlement Policy</span><span><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+                <div class="policy-description">
+                    <ul>
+                        <li>Until the buyer confirms the status of order as complete ie no cancellation or return will be accepted by NowFloats, then only money will be transferred. </li>
+                        <li>Money will be transferred to bank account of seller on t+15 days. </li>
+                        <li>Money will be transferred after deducting delivery charge and NF Payment charge</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="main-footer">
+        <div class="about-header">About NowFloats</div>
+        <div class="about-nf">
+            <div class="footer-logo"><img src="https://cdn.nowfloats.com/nf/v1/Images/Home4/logo.png"></div>
+            <div class="nf-about1">NowFloats Technologies Pvt. Ltd. provides a location-based platform that helps smaller and medium-sized
+                businesses to grow bigger by getting them online and getting discovered by potential customers around them.
+                The company's customers range from neighborhood stores to Fortune 500 companies. It was founded in 2012 and is based in Hyderabad, India.
+                NowFloats has over 750 people across 56 branches in India.
+                <br><br>
+                NowFloats was founded by an experienced and diverse team, which has previously worked in Microsoft, GE and Saatchi & Saatchi.
+                NowFloats has filed for 6 patents and remains a deeply tech/geeky organization. NowFloats is funded by Iron Pillar, IIFL, Mumbai Angels,
+                Blume Ventures and Omidyar Network. NowFloats has strategic partnerships with Google, Verisign and Microsoft,NowFloats.
+            </div>
+        </div>
+        <div class="nf-about2">
+            NowFloats has been recognized for its innovation, winning the Microsoft BizSpark Challenge 2012 and subsequently being incubated at MS Ventures.
+            NowFloats has been featured in Economic Times, CNBC, Entrepreneur, TheNextWeb, TechAsia, and YourStory.in among other recognitions which include
+            NASSCOM EMERGE 50, TechCrunch and Best App by Google.
+        </div>
+
+    </div>
+    <div class="bottom-footer"> @ 2017 NowFloats Technologies Pvt. Ltd.</div>
+</footer>
+<script>
+   $(document).ready(function() {
+        $('.policy-button').click(function(e) {
+        $(this).next().slideToggle('slow');
+        $(this).find('i.fa').toggleClass(" fa-caret-up fa-caret-down");
+        $(this).toggleClass('active');
+        });
+    });
+</script>
+<script>
+	$(document).ready(function() {
+		function trackOrder(data) {
+			$.ajax({
+				url: data,
+				type: 'GET',
+				headers: {
+					Token: "PK2spsISXbg8pkaZmkaoAGlpeMUxvQULJSOPkjL/T23wogDo8TyJ6MJUiLN/2JZTuAj4oQAHSi6kOgCatrZqng=="
+				},
+				dataType: 'json',
+				success: function (response) {
+					var dataObj = (response);
+					console.log(response);
+					$('.shipment-address').html(dataObj.Result.delivAddress);
+					$('.contact-details span').eq(0).html(dataObj.Result.delivPhoneNum);
+					$('.contact-details span').eq(1).html(dataObj.Result.delivEmail);
+
+					$('.order-id td').eq(1).html(dataObj.Result.orderId);
+					$('.order-date td').eq(1).html(dataObj.Result.orderDate);
+					$('.paid-amount td').eq(1).html(dataObj.Result.amount);
+					$('.paid-amount td').eq(1).html(dataObj.Result.amount);
+
+					var trackingState = dataObj.Result.trackingStatus.Data["0"].TrackingStatus;
+					var orderedDates = trackingState.sort(function (a, b) {
+						return Date.parse(a.date) < Date.parse(b.date);
+					});
+					$('.time-span').html("(Last at " + orderedDates[0].location + " " + orderedDates[0].date + ")");
+          $('.current-state').html(orderedDates[0].status);
+          var status = dataObj.Result.orderStatus;
+          var i=0;
+          $(status).each(function(){
+          	if ($(this) !== "null"){
+							$($('.state-path')[i]).css("background-color","#606060");
+							$($('.state')[i]).css("border-color", "#ffb900");
+          		i =+1;
+            }
+          });
+					$($('.state-path')[i]).css("background","linear-gradient(to right, #606060 , #d9d9d9)");
+				}
+
+			});
+		}
+			$('.track-order-button').on('click', function () {
+				var trackID = $('#tracking-id').val();
+				var url = "http://api.nowfloatsdev.com/ProductCatalogue/v1/floatingpoints/trackOrder?orderId=" + trackID + "";
+				trackOrder(url);
+        $('.delivery-bike img').css('left','100vw');
+				$('.overlay-header').fadeOut(1600, function(){
+				$('.header-container').fadeIn(500);
+				});
+			});
+		});
+</script>
+</body>
+</html>

@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+
+body, h1, h2, h3, h4, h5, h6, li, a, p ,button, input {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+input{
+  outline: none;
+  &:focus{
+    outline:none;
+  }
+}
+
+ul, li {
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 5px;
+  -webkit-margin-after: 5px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 10px;
+}
+li{
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+ul ul li {  list-style-type: circle; }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* preventing default input field Styles */
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+
+/* Variable colors */
+
+:root {
+  --white-color : #fff;
+	--text-color: #595959;
+}
+
+/* Mixings */
+
+@mixin auto-margin{
+  margin: 0 auto;
+}
+@mixin flex {
+  display: flex;
+  flex-flow: row wrap;
+  @include auto-margin;
+}
+@mixin width($width) {
+  width: $width;
+  @include auto-margin;
+}
+
+@mixin scroll {
+  background-position: -3000px 0px;
+}
+
+@mixin bounce{
+  0%, 100% {
+    -webkit-transform: translateY(2px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+  }
+}
+@mixin fontStyle($size-font,$weight-font){
+  font-size: $size-font;
+  font-weight: $weight-font;
+}
+@mixin descriptionText($size-font,$weight-font){
+  @include fontStyle($size-font,$weight-font);
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+
+@mixin inputText($size-font,$weight-font,$text-color){
+  @include fontStyle($size-font,$weight-font);
+  color: $text-color;
+}
+@mixin border-radius($topLeft,$topRight,$bottomRight,$bottomLeft){
+  border-top-left-radius:$topLeft;
+  border-top-right-radius:$topRight;
+  border-bottom-right-radius:$bottomRight;
+  border-bottom-left-radius:$bottomLeft;
+}
+/* Header */
+
+header {
+  background-color: #f0f0f0;
+  .header {
+    padding: 15px 0 0;
+    .header-logo {
+      width: 90%;
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid #fdbc1f;
+      @include auto-margin;
+      img {
+        width: 150px;
+      }
+    }
+    .input-track{
+      width: 35%;
+      @include auto-margin;
+      position: relative;
+      top: 25px;
+      span {
+        display: block;
+        margin-bottom: 5px;
+        @include inputText(13px, 400, #6e6e6e)
+      }
+      .track-order {
+        height: 55px;
+        @include flex;
+      }
+    }
+      .moving-path{
+        background-image:url(images/Sillhoutte.png);
+        background-size: cover;
+        -webkit-animation:50s scroll infinite linear;
+        -moz-animation:50s scroll infinite linear;
+        -o-animation:50s scroll infinite linear;
+        -ms-animation:50s scroll infinite linear;
+        animation:50s scroll infinite linear;
+
+      }
+
+  }
+}
+
+
+.track-order {
+
+  input {
+    width: 70%;
+    height: 100%;
+    border: 0;
+    padding: 5px 10px;
+    @include border-radius(2px,0,0,2px);
+    &::placeholder {
+      @include inputText(18px,300, #9c9c9c);
+    }
+    &:focus{
+      box-shadow: 1px 2px 11px 1px #e9e9e9;
+    }
+  }
+  button {
+    width: 30%;
+    height: 100%;
+    outline: none;
+    border: 0;
+    background: #737373;
+    color: var(--white-color);
+    font-size: 16px;
+    @include border-radius(0,2px,2px,0);
+  }
+}
+
+@-webkit-keyframes scroll{
+  100%{
+    @include scroll;
+  }
+}
+
+@-moz-keyframes scroll{
+  100%{
+    @include scroll;
+  }
+}
+
+@-o-keyframes scroll{
+  100%{
+    @include scroll;
+  }
+}
+
+@-ms-keyframes scroll{
+  100%{
+    @include scroll;
+  }
+}
+
+@keyframes scroll{
+  100%{
+    @include scroll;
+  }
+}
+
+@-webkit-keyframes bounce {
+  @include bounce;
+}
+@keyframes bounce {
+ @include bounce;
+}
+
+
+.overlay-header{
+  padding-top: 30px;
+  .delivery-bike {
+    @include width(90%);
+		margin-right: 0;
+		height: 140px;
+		position: relative;
+		overflow: hidden;
+    img {
+      width: 140px;
+			left: 0;
+			position: absolute;
+			transition: left 1.5s linear;
+      -webkit-animation-duration: 1.3s;
+      animation-duration: 1.3s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-name: bounce;
+      animation-name: bounce;
+    }
+  }
+}
+
+
+
+.main{
+  @include width(85%);
+  margin: 2.5rem auto;
+  max-width: 1200px;
+  .assurance-container{
+    padding: 5px 0;
+    @include flex;
+    margin: 3rem auto;
+    justify-content: space-between;
+    .assurance-question{
+      width:100%;
+      margin: 2rem 0;
+      font-size: 21px;
+      letter-spacing: .5px;
+    }
+    .assured-badge{
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      background-color:var(--white-color);
+      box-shadow: 0px 1px 3px 1px #b6b6b6;
+      img{
+        width: 150px;
+        text-align: center;
+      }
+    }
+    .assurance-text {
+      width: 75%;
+      color:var(--text-color);
+     @include descriptionText(16px,300);
+     height: auto;
+			text-align: justify;
+    }
+  }
+}
+
+.section{
+  width:100%;
+  margin: 3rem 0;
+  .section-header{
+    font-size:  21px;
+    color:var(--text-color);
+    @include flex;
+    margin:20px 0;
+    .header-policy {
+      width: 70%;
+      margin: auto 0;
+      span {
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+    .search-field {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .search-input{
+        font-size: 16px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        @include border-radius(2px,2px,2px,2px);
+        box-shadow: 1px 2px 11px 1px #e9e9e9;
+        &::placeholder{
+         @include inputText(16px,300, #9c9c9c);
+        }
+      }
+			.search-button {
+				outline: none;
+				border: none;
+				background: transparent;
+			}
+    }
+  }
+  .policy-steps >*{
+    margin:25px 0;
+    .policy-button{
+      background-color:#b4b4b4;
+      width:100%;
+      padding: 1rem;
+      font-size: 19px;
+      color: var(--white-color);
+      font-weight: 400;
+      @include flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      height:3rem;
+      }
+    }
+  .policy-description {
+    display: none;
+    padding: 2rem;
+    background: white;
+    box-shadow: 1px 1px #ebebeb;
+    border-top: 0;
+    li {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.8;
+      color:#747474;
+      span {
+        @include fontStyle(14px,500);
+        color:#5e5e5e;
+      }
+    }
+
+  }
+
+}
+.active{
+  background-color: #7f7f7f !important;
+}
+
+footer{
+  background-color:#969696;
+  .main-footer{
+    @include width(85%);
+    @include flex;
+    color: #fbfbfb;
+    padding: 2.5rem 0;
+    & > *{
+      margin: 15px 0;
+      padding: 10px 0;
+    }
+    .about-header{
+      width: 100%;
+      font-size: 23px;
+      color: #292929;
+    }
+    .about-nf{
+      @include flex;
+      .footer-logo{
+        width:20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white-color);
+        img{
+        width: 150px;
+        }
+      }
+      .nf-about1{
+        width:75%;
+        @include flex;
+        justify-content: space-between;
+        @include descriptionText(16px,200);
+      }
+    }
+    .nf-about2{
+      width:100%;
+      @include descriptionText(16px,200);
+    }
+
+  }
+  .bottom-footer{
+    background-color: #848484;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 12px;
+  }
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 760px){
+	header {
+		.overlay-header {
+			padding-top: 15px;
+			.input-track {
+				width: 90%;
+				margin: 2rem auto;
+				span{
+					text-align: center;
+				}
+			}
+			.moving-path{
+				margin-top: 7rem;
+				img{
+					margin: 0 auto;
+					display: block;
+				}
+			}
+		}
+	}
+	.main {
+		.assurance-container {
+			.assured-badge {
+				@include width(80%);
+				height: 5rem;
+			}
+			.assurance-text{
+				width:100%;
+				margin: 15px auto;
+			}
+		}
+	}
+}
+
+
+/* Secondary Header */
+
+/* delivery status */
+
+img {
+	max-width: 100%;
+}
+
+.delivery-truck {
+	width: 120px;
+	margin: 10px auto;
+	margin-left: 0;
+}
+
+.status-container {
+	width: 100%;
+	@include flex;
+	background: #fff;
+}
+
+.header-container {
+	width: 85%;
+	margin: 15px auto;
+}
+
+.status-container > * {
+	width: 25%;
+	padding: 20px;
+	margin: 0;
+	border-right: 1px solid #e9e9e9;
+}
+
+.order-status {
+	margin: 10px auto;
+	@include flex;
+}
+
+.order-status >* {
+	width: 100%;
+	display: block;
+	margin: 2px  auto;
+}
+
+
+span.current-state {
+	@include fontStyle(18px,500);
+	color:var(--text-color);
+}
+
+span.time-span {
+	@include fontStyle(13px,400);
+	color:var(--text-color);
+}
+
+.order-details>* {margin-top: 10px;}
+
+.order-header {
+	@include fontStyle(16px,500);
+	margin-bottom:10px;
+	color: #fdbd39;
+}
+
+.shipment-address {
+	@include fontStyle(13px,300);
+	height:65px;
+	overflow: hidden;
+	line-height: 1.3;
+	color: var(--text-color);
+}
+
+.contact-details>* {
+	width: 100%;
+	display: block;
+	line-height: 1.5;
+	@include fontStyle(13px,400);
+	color:var(--text-color);
+}
+
+table {
+	font-size: 15px;
+	color:var(--text-color);
+	height: 85px;
+}
+
+tr td:nth-child(2) {
+	@include fontStyle(11px,300);
+}
+
+
+tr td:nth-child(1) {
+	@include fontStyle(12px,400);
+	padding-right: 10px;
+}
+
+tbody tr {
+	line-height: 1.5;
+}
+
+.contact-note>* {
+	width: 100%;
+	display: block;
+	@include fontStyle(12px,400);
+	font-style: italic;
+	color:var(--text-color);
+}
+
+.manage-info {
+	font-size: 13px;
+	color: var(--text-color);
+	line-height: 1.3;
+}
+
+.order-states{
+	@include width(100%);
+	position: relative;
+	margin-left: 8%;
+}
+
+.state-track {
+	width: 19%;
+	display: inline-block;
+}
+.state-track:last-child {
+	width: 5%;
+}
+.state-track:last-child img {
+	margin-left: -10px;
+}
+.state {
+	border-radius: 50%;
+	border: 5px solid #d9d9d9;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	cursor: pointer;
+	top: 50px;
+	left: -5px;
+	background: var(--white-color);
+}
+
+.state-info {
+@include fontStyle(12px,400);
+	-webkit-transform: translateX(-9%) translateY(-35px);
+	transform: translateX(-9%) translateY(-35px);;
+	text-align: center;
+	height: 50px;
+	display: flex;
+}
+
+.state-path {
+	width: 100%;
+	margin-top: -8px;
+	height: 2px;
+	background: #d9d9d9;
+}
+
+.order-states-container {
+	margin-top: 6rem;
+	margin-left: 5%;
+	padding-bottom: 5%;
+}
+
+
+.state-info img {
+	max-width: 50px;
+	margin-left: -5px;
+
+}
